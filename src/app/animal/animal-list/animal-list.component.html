@@ -1,0 +1,11 @@
+<div class="card-container">
+  <button (click)="moveLeft()" class="arrow">&lt;</button>
+  <div class="cards-wrapper">
+    <div *ngFor="let animal of visibleAnimals" class="card">
+      <app-animal-card [animal]="animal"></app-animal-card>
+    </div>
+  </div>
+  <button (click)="moveRight()" class="arrow">&gt;</button>
+</div>
+
+  
