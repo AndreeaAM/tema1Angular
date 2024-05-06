@@ -1,7 +1,7 @@
 .card {
     width: 300px;
     border-radius: 10px;
-    
+    height: 450px;
     transition: 0.3s;
     overflow: hidden; /* Ensure image does not overflow the card */
     background-color: antiquewhite;
@@ -18,12 +18,13 @@
   
   .card-content {
     padding: 10px;
-    display: block;
+    //display: block;
+    justify-content: space-between;
   }
   
   .card-content button {
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #623c25;
     color: #fff;
     border: none;
     border-radius: 4px;
