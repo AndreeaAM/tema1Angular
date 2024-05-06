@@ -9,7 +9,7 @@ h1{
 .card-container {
     display: flex;
     align-items: center;
-    overflow-x: auto; /* Allow horizontal scrolling */
+    //overflow-x: auto; /* Allow horizontal scrolling */
     padding: 20px; /* Add padding to the container */
     
   }
@@ -34,5 +34,12 @@ h1{
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
+  }
+
+  .card-container-container{
+    display: flex;
+    align-items: center;
+    overflow-y: auto; /* Allow horizontal scrolling */
+    padding: 20px; /* Add padding to the container */
   }
   

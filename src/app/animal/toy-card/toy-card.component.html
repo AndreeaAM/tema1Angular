@@ -1,0 +1,12 @@
+<div class="card">
+    <img src="{{ toy.image }}" alt="{{ toy.name }}" class="card-image">
+    <div class="card-content">
+      <h2>{{ toy.name }}</h2>
+      <p>{{ toy.description }}</p>
+      <div class="card-footer">
+        <p class="cost">Cost: ${{ toy.cost }}</p>
+        <button (click)="orderToy(toy)" class="order-button">Order Now</button>
+      </div>
+    </div>
+  </div>
+  

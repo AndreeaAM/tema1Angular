@@ -9,4 +9,15 @@
   <button (click)="moveRight()" class="arrow">&gt;</button>
 </div>
 
+<h1>Our Fun Toys</h1>
+<div class="card-container">
+  <button (click)="moveLeftToys()" class="arrow">&lt;</button>
+  <div class="cards-wrapper">
+    <div *ngFor="let toy of visibleToys" class="card">
+      <app-toy-card [toy]="toy"></app-toy-card>
+    </div>
+  </div>
+  <button (click)="moveRightToys()" class="arrow">&gt;</button>
+</div>
+
   

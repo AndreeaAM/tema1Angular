@@ -19,5 +19,22 @@ export class HeaderComponent {
       this.searchResults = animals;
     });
   }
+
+  searchToys(): void {
+    this.animalService.searchToys(this.searchValue).subscribe(toys => {
+      console.log(toys); // Display matching toys in console
+      // Assign toys to a component property to display in template
+      this.searchResults = toys;
+    });
+  }
+
+  searchAll(): void {
+    this.animalService.searchAll(this.searchValue).subscribe(results => {
+      console.log(results); // Display matching animals and toys in console
+      // Assign results to a component property to display in template
+      this.searchResults = results;
+    });
+  }
+  
   
 }

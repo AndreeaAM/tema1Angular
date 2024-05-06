@@ -1,0 +1,45 @@
+.card {
+    width: 300px;
+    border-radius: 10px;
+    
+    transition: 0.3s;
+    overflow: hidden; /* Ensure image does not overflow the card */
+    background-color: antiquewhite;
+  }
+  
+  .card-image {
+    width: 90%; /* Ensure image takes full width of the card */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Scale the image to cover the entire area */
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the card */
+    margin-left: 5%; /* Center the image */
+    margin-top: 10px; /* Add space between the image and the top of the card */
+  }
+  
+  .card-content {
+    padding: 10px;
+    display: block;
+  }
+  
+  .card-content button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .card-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  .card-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
