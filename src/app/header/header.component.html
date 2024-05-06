@@ -1,10 +1,9 @@
 <header>
-    <nav>
-      <ul>
-        <li><a routerLink="/animals">Animals</a></li>
-      </ul>
-    </nav>
-    <input type="text" [(ngModel)]="searchValue" />
-    <button (click)="searchAnimals()">Search</button>
+  <nav>
+    <button routerLink="/">Home</button>
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchValue" placeholder="Search" />
+      <button (click)="searchAnimals()">Search</button>
+    </div>
+  </nav>
 </header>
-  

@@ -1,6 +1,11 @@
 <div class="card">
+  <img src="{{ animal.image }}" alt="{{ animal.name }}" class="card-image">
+  <div class="card-content">
     <h2>{{ animal.name }}</h2>
     <p>{{ animal.description }}</p>
-    <button (click)="orderAnimal(animal.name)">Order Now</button>
+    <div class="card-footer">
+      <p class="cost">Cost: ${{ animal.cost }}</p>
+      <button (click)="orderAnimal(animal)" class="order-button">Order Now</button>
+    </div>
   </div>
-  
+</div>
