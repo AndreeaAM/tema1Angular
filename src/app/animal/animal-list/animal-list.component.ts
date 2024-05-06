@@ -99,4 +99,14 @@ export class AnimalListComponent implements OnInit {
       this.updateVisibleToys();
     }
   }
+
+  orderAnimal(animal: string): void {
+    // Handle the ordered animal name
+    this.animalService.orderItem(animal);
+  }
+
+  orderToy(toy: string): void {
+    // Handle the ordered toy name
+    this.animalService.orderItem(toy);
+  }
 }

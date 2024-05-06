@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-toy-card',
@@ -6,8 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./toy-card.component.scss']
 })
 export class ToyCardComponent {
-orderToy(arg0: any) {
-throw new Error('Method not implemented.');
-}
+
   @Input() toy: any;
+  @Output() orderAnimalEvent: EventEmitter<string> = new EventEmitter<string>();
+
+  orderToy(animalName: string) {
+    // Emit the ordered animal name to the parent component
+    this.orderAnimalEvent.emit(animalName);
+    console.log(`Ordered animal: ${animalName}`);
+  }
 }

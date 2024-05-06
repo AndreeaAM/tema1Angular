@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +30,9 @@ export class AnimalService {
   { name: 'Treat Puzzle Ball', description: 'A puzzle ball that dispenses treats as your pet rolls and plays with it, promoting mental stimulation and problem-solving.', image: 'https://m.media-amazon.com/images/I/71wVBZiD4nL.jpg', cost: 15 }
   ]
 
+  private orderedItemSubject = new BehaviorSubject<any>(null);
+  orderedItem$ = this.orderedItemSubject.asObservable();
+
   constructor() { }
 
   getAnimals(): Observable<any[]> {
@@ -57,5 +60,9 @@ export class AnimalService {
       item.name.toLowerCase() === searchTerm.toLowerCase()
     );
     return of(filteredItems);
+  }
+
+  orderItem(item: any): void {
+    this.orderedItemSubject.next(item);
   }
 }

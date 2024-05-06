@@ -9,5 +9,9 @@
   <div class = "advertisement">
     <h3>Welcome to the Pet Shop!</h3>
     <h1>Here you will find pet best friends for you!</h1>
+    <button routerLink="/">Order Now</button>
+  </div>
+  <div class="ordered-item" *ngIf="orderedItemName">
+    Ordered Item: {{ orderedItemName }}
   </div>
 </header>

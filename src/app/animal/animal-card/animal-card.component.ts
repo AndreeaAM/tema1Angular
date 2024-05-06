@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-animal-card',
@@ -8,9 +8,18 @@ import { Component, Input } from '@angular/core';
 export class AnimalCardComponent {
 
   @Input() animal: any;
+  @Output() orderAnimalEvent: EventEmitter<string> = new EventEmitter<string>();
 
   orderAnimal(animalName: string) {
-    // Implement this method to handle ordering of the selected animal
+    // Emit the ordered animal name to the parent component
+    this.orderAnimalEvent.emit(animalName);
+    console.log(`Ordered animal: ${animalName}`);
   }
+
+  orderToy(toyName: string) {
+    this.orderAnimalEvent.emit(toyName);
+    console.log(`Ordered toy: ${toyName}`);
+  }
+
 
 }
